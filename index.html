@@ -72,45 +72,50 @@
 						</footer>
 
 						<ul id="navigation">
-							<li><a id="contact-link" href="#">Contact</a></li>
-							<li><a id="about-link" href="#">About</a></li>
-							<li><a id="action-link" href="#">Action</a></li>
+							<li><a id="contact-link" href="#contact-form">Contact</a></li>
+							<li><a id="about-link" href="#about-link">About</a></li>
+							<li><a id="action-link" href="#action-link">Action</a></li>
 						</ul>	
 
 
-						<div id="contact-form">
-							<form method="post" action="#">
+						<!-- Contact Form -->
+						<div id="contact-form" class="dialouge" style="display:none">
+						<br/>
+							<h2>Get in Touch</h2>
+							<form method="post" action="https://formspree.io/sheller0@gmail.com">
 								<div class="field">
 									<input type="text" name="name" id="name" placeholder="Name" />
 								</div>
 								<div class="field">
-									<input type="email" name="email" id="email" placeholder="Email" />
+									<input type="email" name="_replyto" id="email" placeholder="Email" />
 								</div>
 								<div class="field">
 									<div class="select-wrapper">
 										<select name="department" id="department">
-											<option value="">Department</option>
-											<option value="sales">Sales</option>
-											<option value="tech">Tech Support</option>
-											<option value="null">/dev/null</option>
+											<option value="">Interest</option>
+											<option value="sales">Media</option>
+											<option value="tech">Volunteer</option>
+											<option value="null">Updates</option>
 										</select>
 									</div>
 								</div>
 								<div class="field">
 									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
 								</div>
-								<div class="field">
-									<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-								</div>
-								<div class="field">
-									<label>But are you a robot?</label>
-									<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-									<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-								</div>
 								<ul class="actions">
-									<li><a href="#" class="button">Get Started</a></li>
+									<li><input type="submit" value="Get in Touch" class="button"></li>
 								</ul>
 							</form>						
+						</div>
+
+
+						<div id="about-section" class="dialouge" style="display:none">
+							<h1>About Section</h1>
+						</div>
+
+
+						<div id="action-section" class="dialouge" style="display:none">
+							<h1>Action Section</h1>
 						</div>
 
 
@@ -133,7 +138,25 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>
-			<script src="https://code.jquery.com/jquery-3.1.1.min.js"/>
+			<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+			<script>
+				$( "#contact-link").on( "click", function( event ) {
+					$(".dialouge").hide();
+				  	$("#contact-form").show();
+				});
+
+				$( "#about-link").on( "click", function( event ) {
+					$(".dialouge").hide();
+				  	$("#about-section").show();
+				});
+
+				$( "#action-link").on( "click", function( event ) {
+					$(".dialouge").hide();
+				  	$("#action-section").show();
+				});								
+			</script>
+
+
 
 	</body>
 </html>
