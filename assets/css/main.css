@@ -871,6 +871,9 @@
 	color: #ECECC6; /* Tan */
 }
 
+.selected {
+	color: #64C1E1;
+}
 
 #navigation {
 	display: inline;
@@ -885,4 +888,8 @@
     font-size: 13pt;
     color: #ECECC6;
 
+}
+
+.dialouge {
+	max-width: 27em;
 }

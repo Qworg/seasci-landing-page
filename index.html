@@ -72,9 +72,9 @@
 						</footer>
 
 						<ul id="navigation">
-							<li><a id="contact-link" href="#contact-form">Contact</a></li>
-							<li><a id="about-link" href="#about-link">About</a></li>
-							<li><a id="action-link" href="#action-link">Action</a></li>
+							<li><a id="contact-link" class="navlink" href="#contact-link">Contact</a></li>
+							<li><a id="about-link" class="navlink" href="#about-link">About</a></li>
+							<li><a id="action-link" class="navlink" href="#action-link">Action</a></li>
 						</ul>	
 
 
@@ -82,6 +82,7 @@
 						<div id="contact-form" class="dialouge" style="display:none">
 						<br/>
 							<h2>Get in Touch</h2>
+							<!-- form method="post" action="https://formspree.io/seattlesciencemarch@gmail.com"-->
 							<form method="post" action="https://formspree.io/sheller0@gmail.com">
 								<div class="field">
 									<input type="text" name="name" id="name" placeholder="Name" />
@@ -110,12 +111,50 @@
 
 
 						<div id="about-section" class="dialouge" style="display:none">
-							<h1>About Section</h1>
+							<p>
+							The March for Science champions robustly funded and publicly communicated science as a pillar of human freedom and prosperity. We unite as a diverse, nonpartisan group to call for science that upholds the common goodand for political leaders and policy makers to enact evidence based policies in the public interest
+							</p>
 						</div>
 
 
 						<div id="action-section" class="dialouge" style="display:none">
-							<h1>Action Section</h1>
+							<h1>
+							To make the march a reality, we need 
+							<a href="https://www.kickstarter.com/projects/919052445/march-for-science-earth-supporter-shirt">support!</a> 
+							</h1>
+								Expenses may include:
+								<ul>
+									<li>Permits</li>
+									<li>Road Closures</li>
+									<li>Portable Restrooms</li>
+									<li>Signs and shirts</li>
+									<li>Per Diems for Volunteers</li>
+									<li>Water for Participants</li>
+									<li>Fliers and other Promotional Materials</li>
+								</ul>
+								<p>
+								We need to raise $5,000 to make sure we can cover these costs. Join our cause, and 
+								<a href="https://www.kickstarter.com/projects/919052445/march-for-science-earth-supporter-shirt">
+								help us make our voices heard!
+								</a>
+								</p>
+
+								<h3><a href="https://www.kickstarter.com/projects/919052445/march-for-science-earth-supporter-shirt">Earth Supporter Shirt</a></h3>
+
+								<p>
+								With the advent of a new administration, it’s a worrying time for lovers of Science. Federal agencies have been forced to silence their social media presence. The administration has ordered that studies or data from the Environmental Protection Agency, including content on the EPA website, must be reviewed by political appointees before being released to the public. March for Science-Seattle will unite scientists and the pro-Science community, to make our voice heard!
+								</p>
+
+								<p>
+								Our goal is to promote the respect for, and use of, Science in public discourse and public policy, but we can’t do it without help.
+								</p>
+
+								<p>
+								<a href="https://www.kickstarter.com/projects/919052445/march-for-science-earth-supporter-shirt">Support the March!</a>
+
+
+
+							
 						</div>
 
 
@@ -141,19 +180,23 @@
 			<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 			<script>
 				$( "#contact-link").on( "click", function( event ) {
-					$(".dialouge").hide();
-				  	$("#contact-form").show();
+					navSelect($("#contact-link"), $("#contact-form"));
 				});
 
 				$( "#about-link").on( "click", function( event ) {
-					$(".dialouge").hide();
-				  	$("#about-section").show();
+					navSelect($("#about-link"), $("#about-section"));
 				});
 
 				$( "#action-link").on( "click", function( event ) {
+					navSelect($("#action-link"), $("#action-section"));
+				});					
+
+				function navSelect(linkObj, divObj){
 					$(".dialouge").hide();
-				  	$("#action-section").show();
-				});								
+					$(".navlink").removeClass("selected");
+					linkObj.addClass("selected");
+					divObj.show();
+				}			
 			</script>
 
 
