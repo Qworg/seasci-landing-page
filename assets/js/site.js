@@ -1,6 +1,6 @@
 var hiddenBox = $( "#banner-message" );
 
 $( "#contact-link").on( "click", function( event ) {
-	$(".dialouge").hide();
+	$(".section").hide();
   	$("#contact-form").show();
 });

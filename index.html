@@ -26,28 +26,31 @@
 							<span class="avatar"><img src="images/logo.png" alt="" /></span>
 							<h1 id="callout">Seattle March for Science</h1>
 							<p id="date">April 22, 2017 - Seattle, WA</p>
-						</header>
-					
-						<footer>
 							<ul class="icons">
 								<li><a href="#" class="fa-twitter">Twitter</a></li>
 								<li><a href="#" class="fa-facebook">Facebook</a></li>
 							</ul>
-						</footer>
-
+						</header>
+					
+						<footer>
 						<ul id="navigation">
 							<li><a id="contact-link" class="navlink">Contact</a></li>
 							<li><a id="about-link" class="navlink">About</a></li>
 							<li><a id="action-link" class="navlink">Action</a></li>
-						</ul>	
+						</ul>
+
+
+						
+
+						
 
 
 						<!-- Contact Form -->
-						<div id="contact-form" class="dialouge" style="display:none">
+						<div id="contact-form" class="section" style="display:none">
 						<br/>
 							<h2>Get in Touch</h2>
 							<!-- form method="post" action="https://formspree.io/seattlesciencemarch@gmail.com"-->
-							<form method="post" action="https://formspree.io/sheller0@gmail.com">
+							<form method="post" action="https://formspree.io/sheller0@gmail.com" class="form">
 								<div class="field">
 									<input type="text" name="name" id="name" placeholder="Name" />
 								</div>
@@ -74,7 +77,7 @@
 						</div>
 
 
-						<div id="about-section" class="dialouge" style="display:none">
+						<div id="about-section" class="section" style="display:none">
 							<p>
 							The March for Science champions robustly funded and publicly communicated science as a pillar of human freedom and prosperity. We unite as a diverse, nonpartisan group to call for science that upholds the common goodand for political leaders and policy makers to enact evidence based policies in the public interest
 							</p>
@@ -83,7 +86,7 @@
 						</div>
 
 
-						<div id="action-section" class="dialouge" style="display:none">
+						<div id="action-section" class="section" style="display:none">
 							<h1>
 							To make the march a reality, we need 
 							<a href="https://www.kickstarter.com/projects/919052445/march-for-science-earth-supporter-shirt">support!</a> 
@@ -123,6 +126,7 @@
 
 							
 						</div>
+						</footer>
 
 
 					</section>
@@ -159,7 +163,7 @@
 				});					
 
 				function navSelect(linkObj, divObj){
-					$(".dialouge").hide();
+					$(".section").hide();
 					$(".navlink").removeClass("selected");
 					linkObj.addClass("selected");
 					divObj.show();
